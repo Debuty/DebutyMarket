@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Root = ReactDOM.createRoot(document.querySelector("#root"));
 
 Root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/DebutyMarket">
   <UserContextProvider>
     <ToastContainer/>
     <App />
