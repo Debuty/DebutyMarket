@@ -1,0 +1,93 @@
+[
+    {
+        "id": "1",
+        "Name": "Large Burger",
+        "isInCart": false,
+        "Count": 1,
+        "price": 90,
+        "CategorieId":1,
+        "All":0
+        
+      },
+      {
+        "id": "2",
+        "Name": "Large Fries",
+        "isInCart": false,
+        "Count": 1,
+        "price": 50,
+        "CategorieId":2,
+        "All":0
+        
+      },
+      {
+        "id": "3",
+        "Name": "Large Water  ",
+        "isInCart": false,
+        "Count": 1,
+        "price": 30,
+        "CategorieId":3,
+        "All":0
+        
+      },
+      {
+        "id": "4",
+        "Name": "Medium Burger",
+        "isInCart": false,
+        "Count": 1,
+        "price": 70,
+        "CategorieId":1,
+        "All":0
+        
+      },
+      {
+        "id": "5",
+        "Name": "Medium Fries",
+        "isInCart": false,
+        "Count": 1,
+        "price": 40,
+        "CategorieId":2,
+        "All":0
+        
+      },
+      {
+        "id": "6",
+        "Name": "Medium Water  ",
+        "isInCart": false,
+        "Count": 1,
+        "price": 20,
+        "CategorieId":3,
+        "All":0
+        
+      },
+      {
+        "id": "7",
+        "Name": "Small Burger",
+        "isInCart": false,
+        "Count": 1,
+        "price": 50,
+        "CategorieId":1,
+        "All":0
+        
+      },
+      {
+        "id": "8",
+        "Name": "Small Fries",
+        "isInCart": false,
+        "Count": 1,
+        "price": 20,
+        "CategorieId":2,
+        "All":0
+        
+      },
+      {
+        "id": "9",
+        "Name": "Small Water  ",
+        "isInCart": false,
+        "Count": 1,
+        "price": 10,
+        "CategorieId":3,
+        "All":0
+       
+      }
+  
+  ]
