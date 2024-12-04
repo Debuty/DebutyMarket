@@ -6,15 +6,15 @@ export default function ContactUs() {
 
    const {state} = useLocation();
 
-// const x = useContext(UserContext)
-// console.log(x)
+   console.log(state)
+
+   
 
     return (
         <div className='flex gap-6 font-bold'>
-            ContactUs
-            <Link to={"/"}>App</Link>
+         
 
- {state}
+         
         </div>
     )
 }

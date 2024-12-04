@@ -27,11 +27,7 @@ const Mode = id ===  "New" ? "Add" :"Edit";
    } : Items.find(i => i.id == id));
 
 
-   console.log(id)
-
-   console.log(Items)
-  
-  console.log(Form)
+   
 
  useEffect(()=>{ Mode==="Edit"&& SetForm( Items.find(i => i.id == id) ) } , [Items])
 
@@ -89,7 +85,7 @@ else {
       All: 0,
     };
 
-    fetch("http://localhost:3000/products", {
+    fetch("Test-1.json", {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // Specify JSON format
@@ -109,7 +105,7 @@ else {
         console.error("Error:", error); // Handle any errors
       });
 
-      handelAddProduct(postData)
+      handelAddProduct(postData)  
   };
 
 
@@ -147,7 +143,6 @@ else {
    return <LoadingIcon/>
  }
  
-  // console.log( Items.length.toString())
   return (
     <form onSubmit={HandelSubmit}>
 

@@ -26,6 +26,8 @@ import ProdectForm from './Pages/ProdectForm';
 
 export default function App() {
   
+const [Test , SetTest] = useState([])
+
 const [Catigorie , SetCatigorie] = useState([])
 
 const [Items, SetItems] = useState([]);
@@ -66,24 +68,25 @@ const handelClickPagination = (PageNum)=>{
 
     const FetchData = async ()=>{
 
-      const res = await fetch("http://localhost:3000/products");
+      const res = await fetch("https://api.jsonbin.io/v3/b/674fb5bcad19ca34f8d52221");
 
       const data = await res.json();
 
-      SetItems(data);
+      SetItems(data.record);
 
     }
 
       const FetchCategorie = async ()=>{
 
-        const res = await fetch("http://localhost:3000/Categories");
+        const res = await fetch("https://api.jsonbin.io/v3/b/674fbeb5e41b4d34e45f68c9");
   
         const data = await res.json();
   
-        SetCatigorie(data);
+        SetCatigorie(data.record);
 
     }
 
+   
     FetchCategorie();
     FetchData();
 
@@ -198,7 +201,7 @@ const RestoreItems = (items)=>{
 
   let Items_length = Items.filter((item) => item.IsInCart).length;
 
-  //  console.log("App");
+    console.log(Items);
   return (
     <div>
 
@@ -260,7 +263,7 @@ const RestoreItems = (items)=>{
         </Routes>
       </main>
       
-      
+    {/* <Footer /> */}
     </div>
   );
 }

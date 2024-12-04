@@ -7,8 +7,8 @@ export default function Footer() {
 
 
     return (
-        <div className=' fixed bottom-0 w-full '>
-            <footer className="footer bg-neutral text-neutral-content p-10">
+        <div className=' fixed bottom-0 w-full h-28 mb-16'>
+            <footer className="flex bg-neutral text-neutral-content p-10 justify-between">
                 <aside>
                     <svg
                         width="50"
@@ -27,7 +27,7 @@ export default function Footer() {
                         Providing reliable tech since 1992
                     </p>
                 </aside>
-                <nav>
+                <nav >
                     <h6 className="footer-title">Social</h6>
                     <div className="grid grid-flow-col gap-4">
                         <a>
