@@ -38,6 +38,8 @@ const Mode = id ===  "New" ? "Add" :"Edit";
   const HandelSubmit = (e) => {
     e.preventDefault();
 
+
+    
   
 //     const AddProdectToApi = async ()=>{
 
@@ -56,20 +58,29 @@ const Mode = id ===  "New" ? "Add" :"Edit";
 
 if(Mode === "Add"){
 
-  AddItemsToApi(); 
 
-  toast.success("Add !" , {position:"bottom-right"});
+  toast.error("An item cannot be added", {
+    position: "top-center"
+  });
 
-  navigate("/Admin")
+  // AddItemsToApi(); 
+
+  // toast.success("Add !" , {position:"bottom-right"});
+
+  // navigate("/Admin")
 }
 
 else {
 
-  EditItemsToApi()
+  toast.error("An item cannot be modified", {
+    position: "top-center"
+  });
 
-  toast.success("Edit !" , {position:"bottom-right"});
+  // EditItemsToApi()
+
+  // toast.success("Edit !" , {position:"bottom-right"});
   
-  navigate("/Admin")
+  // navigate("/Admin")
 
 }
 

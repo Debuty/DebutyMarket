@@ -8,38 +8,42 @@ export default function Admin({Items,Catigorie , handelDeletProduct,RestoreItems
 
   const handelDelet = (IdForDelet)=>{
 
-console.log(IdForDelet)
+// console.log(IdForDelet)
 
-const CurrentItems = Items;
+toast.error("An item cannot be deleted", {
+  position: "top-center"
+});
 
-    handelDeletProduct(IdForDelet)
+// const CurrentItems = Items;
 
-    fetch(`http://localhost:3000/products/${IdForDelet}`, { 
-      method: "DELETE", 
-      headers: {
-        "Content-Type": "application/json", 
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to delete item. Status: " + response.status);
-        }
-        return response.json(); 
-      })
-      .then((data) => {
-        console.log("Item deleted successfully:", data); 
-        toast.info("Deleted !", {
-          position: "bottom-right"
-        });
+//     handelDeletProduct(IdForDelet)
+
+//     fetch(`http://localhost:3000/products/${IdForDelet}`, { 
+//       method: "DELETE", 
+//       headers: {
+//         "Content-Type": "application/json", 
+//       },
+//     })
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw new Error("Failed to delete item. Status: " + response.status);
+//         }
+//         return response.json(); 
+//       })
+//       .then((data) => {
+//         console.log("Item deleted successfully:", data); 
+//         toast.info("Deleted !", {
+//           position: "bottom-right"
+//         });
   
-      })
-      .catch((error) => {
-        console.error("Error:", error); 
-        RestoreItems(CurrentItems)
-        toast.error("Deleted faeld !", {
-          position: "bottom-right"
-        });
-      });
+//       })
+//       .catch((error) => {
+//         console.error("Error:", error); 
+//         RestoreItems(CurrentItems)
+//         toast.error("Deleted faeld !", {
+//           position: "bottom-right"
+//         });
+//       });
 
       
   
