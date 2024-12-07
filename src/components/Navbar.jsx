@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CartIcon from './../Icons/CartIcon';
 
 import { Link, useNavigate, NavLink } from 'react-router-dom';
 
 
+import './Test.css';
+import MenuIcon from './../Icons/MenuIcon';
 export default function Navbar(props) {
 
     const Navigate = useNavigate();
@@ -15,18 +17,26 @@ export default function Navbar(props) {
 
     }
 
-    // console.log("Navbar")
+    const [MenuLock , SetMenuLock] = useState(true)
 
+    const handelMenuLock = ()=>{
+        SetMenuLock(!MenuLock)
+    }
+    // console.log("Navbar")
+console.log(MenuLock)
     return (
         <div>
 
-            <div className="navbar bg-green-900 text-black justify-between">
+            <div className="flex bg-green-900 text-black items-center p-2 justify-between relative">
 
-                <div className="">
+
+            <div className='Menu-icon cursor-pointer' onClick={handelMenuLock}><MenuIcon/></div>
+
+                 <div className="Debuty-Logo">
                     <a className="btn btn-ghost text-xl">Debuty Market</a>
                 </div>
 
-                <div className=" flex gap-6 font-bold">
+                <div className={MenuLock ? "flex gap-6 font-bold Links" : "flex gap-6 font-bold Links hidden" }>
                     <NavLink to="/" >Home</NavLink>
                     <NavLink to='/'> Menu</NavLink>
                     <NavLink to='/Contact' >Contactus</NavLink>
@@ -35,9 +45,10 @@ export default function Navbar(props) {
                    {<NavLink to='/Admin' >Admin</NavLink>}
                     <NavLink to='/Test' >Test</NavLink>
                 </div>
+ 
+  
 
-
-                <div className="flex-none mr-10 relative">
+                <div className=" mr-10 relative">
 
                 <NavLink to="/cart" ><CartIcon /></NavLink> 
 

@@ -1,0 +1,32 @@
+
+.Menu-icon{
+    display:none;
+}
+
+@media(max-width:384px){
+
+.Debuty-Logo {
+    
+    display: none;
+}
+
+.Menu-icon{
+    display: block;
+}
+
+.Links{
+
+    position: absolute;
+    left: 0px;
+    top: 55px;
+    flex-direction: column;
+    gap: 3px;
+    background-color: rgb(10, 54, 18);
+    z-index: 100;
+    padding: 10px;
+    border-radius: 0px 10px 10px 0px ;
+
+}
+
+
+}

@@ -21,7 +21,7 @@ export default function Menu(props) {
 
   return (
 
-<div className="text-center mt-10">  
+<div className="text-center mt-10 m-3">  
 
 <input type="text"  placeholder="Test" className="p-1 pl-3 border border-black rounded-xl outline-none" />
 
