@@ -27,7 +27,7 @@ console.log(MenuLock)
     return (
         <div>
 
-            <div className="flex bg-green-900 text-black items-center p-2 justify-between relative">
+            <div className="flex bg-green-900 text-black items-center p-2 justify-around relative">
 
 
             <div className='Menu-icon cursor-pointer' onClick={handelMenuLock}><MenuIcon/></div>
@@ -37,13 +37,9 @@ console.log(MenuLock)
                 </div>
 
                 <div className={MenuLock ? "flex gap-6 font-bold Links" : "flex gap-6 font-bold Links hidden" }>
-                    <NavLink to="/" >Home</NavLink>
                     <NavLink to='/'> Menu</NavLink>
-                    <NavLink to='/Contact' >Contactus</NavLink>
-                    <NavLink to='/Prodects' >Prodects</NavLink>
                     <NavLink to='/LogIn' >Log In</NavLink>
                    {<NavLink to='/Admin' >Admin</NavLink>}
-                    <NavLink to='/Test' >Test</NavLink>
                 </div>
  
   
